@@ -66,6 +66,7 @@ public class ATM_Interface {
         		
         	case 4:
         		System.out.println("please enter revicer user id");
+				String tfid = c.next();
         		System.out.println("Please enter amount");
         		int Tf= c.nextInt();
         		if(balance>=Tf) {
