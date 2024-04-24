@@ -7,6 +7,22 @@ import javax.swing.*;
   
 class OnlineExam extends JFrame implements ActionListener  
 {  
+  static void log() {
+		Scanner c = new Scanner(System.in);
+		System.out.println("Please enter username");
+		String user = "charan";
+		String id = c.next();
+		System.out.println("Please enter password");
+		String pass = "charan$123";
+		String pwd = c.next();
+		if(user.equals(id) && pass.equals(pwd)) {
+			System.out.println("Welcome");
+		}
+		else {
+			System.out.println("Invalid details");
+			System.exit(0);
+		}	
+	}
     JLabel l;  
     JRadioButton jb[]=new JRadioButton[5];  
     JButton b1,b2;  
@@ -183,6 +199,7 @@ class OnlineExam extends JFrame implements ActionListener
     }  
     public static void main(String s[])  
     {  
+      log();
         new OnlineExam("Online Test Of Java");  
     }  
 }
